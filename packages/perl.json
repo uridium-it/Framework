@@ -1,0 +1,9 @@
+{
+  "package": {
+    "name": "perl",
+    "version": "v5.42.0",
+    "source_url": "https://github.com/Perl/perl5.git",
+    "build_type": "Release",
+    "perl_root": "$(project_root)/tools/perl"
+  }
+}

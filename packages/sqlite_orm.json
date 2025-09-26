@@ -1,0 +1,9 @@
+{
+  "package": {
+    "name": "sqlite_orm",
+    "dependencies": "sqlite",
+    "version": "v1.9.1", 
+    "source_url": "https://github.com/fnc12/sqlite_orm.git",
+    "build_type": "Release"
+  }
+}

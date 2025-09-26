@@ -1,0 +1,8 @@
+{
+  "package": {
+    "name": "llhttp", 
+    "version": "v9.3.0", 
+    "source_url": "https://github.com/nodejs/llhttp/archive/refs/tags/release/v9.3.0.tar.gz",
+    "build_type": "Release"
+  }
+}

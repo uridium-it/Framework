@@ -1,0 +1,10 @@
+{
+  "package": {
+    "name": "restinio",
+    "dependencies": "boost catch2 fmt expected-lite llhttp",
+    "version": "v0.7.7", 
+    "source_url": "https://github.com/stiffstream/restinio.git",
+    "build_type": "Release",
+    "platform": "multi"
+  }
+}

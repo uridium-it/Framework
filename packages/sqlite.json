@@ -1,0 +1,8 @@
+{
+  "package": {
+    "name": "sqlite", 
+    "version": "version-3.50.4", 
+    "source_url": "https://www.sqlite.org/2025/sqlite-autoconf-3500400.tar.gz",
+    "build_type": "Release"
+  }
+}

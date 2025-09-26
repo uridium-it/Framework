@@ -1,0 +1,9 @@
+{
+  "project": {
+    "root": "$(home)/project_root"
+  },
+  "artifacts": {
+    "repo_url": "https://github.com/uridium-it/artifacts",
+    "repo_version": "v1.0"
+  }
+}
