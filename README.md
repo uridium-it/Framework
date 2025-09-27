@@ -229,14 +229,14 @@ When you have your `.zsh` script and `.json` file, for example:
 
 you can do:
 
-   build_system_loader
-   artifacts_system_loader
-   load_package mylib
-   package_name
-   package_version
-   download_source_package
-   build_install -f
-   make_artifact -f
+      build_system_loader
+      artifacts_system_loader
+      load_package mylib
+      package_name
+      package_version
+      download_source_package
+      build_install -f
+      make_artifact -f
 
 Now you can upload the artifacts: this is actually just a git add/commit/push, using GitHub's Workflow release.
 
