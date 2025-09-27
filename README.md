@@ -212,10 +212,10 @@ and the corresponding json file, 'nlohmann-json.json':
 
 The following function will be created from this json file:
 
-    package_name()
-    package_version()
-    package_source_url()
-    package_build_type()
+      package_name()
+      package_version()
+      package_source_url()
+      package_build_type()
 
 and they will be available during the execution of the function `package_build_install()`
 
@@ -224,8 +224,8 @@ and they will be available during the execution of the function `package_build_i
 
 When you have your `.zsh` script and `.json` file, for example:
 
-    packages/mylib.zsh
-    packages/mylib.json
+      packages/mylib.zsh
+      packages/mylib.json
 
 you can do:
 

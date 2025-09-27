@@ -3,7 +3,7 @@
 function() {
   pm1(){ printf "The correct invocation is:\n\n  cd Framework\n  source ./install.sh\n\n" ; }
   if ! source ./loader.zsh ; then pm1 ; return 1 ; fi
-  if root_dir | search_string '/Framework$' | is_empty ; then
+  if ! root_dir | grep -q '/Framework$' ; then
     pm1 ; return 1
   fi
   f="Framework(){ cd '$(root_dir)' && source ./loader.zsh ; } ; Framework"
