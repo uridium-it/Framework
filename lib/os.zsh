@@ -15,6 +15,13 @@ elif is_linux; then
   gnu_tar(){ tar "${@}" ; }
   gnu_awk(){ awk "${@}" ; }
   gnu_find(){ find "${@}" ; }
+elif is_osx; then
+  gnu_sed(){ gsed "${@}" ; }
+  gnu_grep(){ ggrep "${@}" ; }
+  gnu_tar(){ gtar "${@}" ; }
+  gnu_awk(){ awk "${@}" ; }
+  gnu_find(){ gfind "${@}" ; }
+  nproc(){ sysctl -n hw.physicalcpu ; }
 fi
 
 convert_path_msys_to_windows(){ gnu_sed 's%^\(/\)\([a-z]\)/%\U\2:/%1' ; }
@@ -38,19 +45,6 @@ else
   convert_path(){ tee ; }
   convert_back(){ tee ; }
   convert_dots(){ gnu_sed 's%\.\.\.$%\\%' ; }
-fi
-
-if is_osx; then
-  osx_brew_root(){ app_tools_dir | append /brew ; }
-  make_alias(){
-    osx_brew_root | append "/bin/${2}"' "${@}"' | to_function "${1}"
-  }
-  make_alias 'gnu_sed' 'gsed'
-  make_alias 'gnu_grep' 'ggrep'
-  make_alias 'gnu_tar' 'gtar'
-  make_alias 'gnu_awk' 'awk'
-  make_alias 'gnu_find' 'gfind'
-  nproc(){ sysctl -n hw.physicalcpu ; }
 fi
 
 remove_directory(){
