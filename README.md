@@ -242,8 +242,9 @@ Now you can upload the artifacts: this is actually just a git add/commit/push, u
 
 and on another machine (we need only the json file, on this one):
 
-    download_artifact zlib
-    install_artifact zlib
+      artifacts_system_loader
+      download_artifact zlib
+      install_artifact zlib
 
 Basically once you compile your library once you can distribute the precompiled package (artifact), 
 to multiple machines/developers, using this workflow.
