@@ -56,11 +56,18 @@ they are expected to work seamlessly across a variety of processor architectures
 
 The target operating systems and compilers for this project includes:
 
-    Windows, with Microsoft's msvc compiler
-    OSX, with Apple's clang compiler
-    Linux, with GNU's gcc compiler
+    Windows: Microsoft's msvc compiler
+    MacOS X: Apple's clang compiler
+    Linux: GNU's gcc compiler
 
 Cross compilation is not yet supported.
+
+## Build Status
+
+    Windows 11 amd64 -> OK
+    MacOS X arm64 -> OK
+    Ubuntu Linux amd64 -> OK
+    Arch Linux amd64 -> OK
 
 ## Default source packages
 
