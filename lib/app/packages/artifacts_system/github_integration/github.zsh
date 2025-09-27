@@ -30,7 +30,7 @@ download_artifact(){
     echo "Packages list:"
     echo "${packages}"
     worker(){
-      load_package "${1}" || return 1
+      load_package_json "${1}" || return 1
       download_single_artifact
     }
     echo "${packages}" | pass -until worker

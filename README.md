@@ -12,7 +12,7 @@ _**Framework**_ is a simple multi-platform package manager focused primarily on 
 
 ## Package Lifecycle
 
-You have two primary workflow: 
+You have two primary workflows: 
 
     Download source code -> compilation -> installation -> artifact creation -> upload the artifact on GitHub
 
@@ -229,20 +229,21 @@ When you have your `.zsh` script and `.json` file, for example:
 
 you can do:
 
-    load_package mylib
-    package_name
-    package_version
-    download_source_package
-    build_install
-    make_artifact
+   build_system_loader
+   artifacts_system_loader
+   load_package mylib
+   package_name
+   package_version
+   download_source_package
+   build_install -f
+   make_artifact -f
 
 Now you can upload the artifacts: this is actually just a git add/commit/push, using GitHub's Workflow release.
 
 and on another machine (we need only the json file, on this one):
 
-    load_package_json mylib
-    download_artifact
-    install_artifact
+    download_artifact zlib
+    install_artifact zlib
 
 Basically once you compile your library once you can distribute the precompiled package (artifact), 
 to multiple machines/developers, using this workflow.
