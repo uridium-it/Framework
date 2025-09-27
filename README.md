@@ -68,6 +68,7 @@ Cross compilation is not yet supported.
     MacOS X arm64 -> OK
     Ubuntu Linux amd64 -> OK
     Arch Linux amd64 -> OK
+    Fedora Linux amd64 -> OK
 
 ## Default source packages
 
