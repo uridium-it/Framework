@@ -5,6 +5,7 @@ cmake_build_install(){
         echo -E "cmake ${*} ..."
         echo -E "-B $(tmp_home | append /build_dir | convert_path | double_quote) ..."
         echo -E "-DCMAKE_INSTALL_PREFIX=$(project_root | convert_path | double_quote) ..."
+        echo -E "-DCMAKE_INSTALL_LIBDIR=lib ..."
         echo -E "$(tmp_home | append /source_dir | convert_path | double_quote)"
       } "${@}"
     (){
