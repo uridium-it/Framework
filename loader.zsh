@@ -4,6 +4,12 @@ source lib/include.zsh
 
 include lib/functional.zsh
 include lib/os.zsh
+
+if is_osx ; then
+  PATH=$PATH:$(app_tools_dir)/brew/bin
+  export PATH
+fi
+
 include lib/app/annotations/require.zsh
 
 package_system_loader(){

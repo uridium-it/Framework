@@ -15,7 +15,7 @@ fatal_exit(){
 
 echo -e 'Testing configuration'
 
-required_commands="gnu_sed gnu_grep gnu_tar gnu_awk gnu_find jq xz cmake zsh wget git make curl"
+required_commands="gnu_sed gnu_grep gnu_tar gnu_awk gnu_find jq xz cmake zsh git make curl"
 
 if is_osx ; then
   echo "${required_commands} clang clang++" | to_var required_commands
@@ -26,12 +26,12 @@ fi
 test_cmd(){
   local cmd
   if function_exists "${1}" ; then
-    get_function_body "${1}" | sed 's/^[\t ]*//;s/ .*//' | to_var cmd
+    get_function_body "${1}" | sed 's/^\t*//;s/ .*//' | to_var cmd
   else
     cmd="${1}"
   fi
   echo -n "${cmd} ($1): "
-  if silent whence "${cmd}" ; then
+  if silent whence ${cmd} ; then
     print_ok
   else
     print_error ": Required but not installed"
@@ -42,3 +42,4 @@ test_cmd(){
 echo "${required_commands}" | split_spaces | pass test_cmd
 
 fatal_error && fatal_exit
+return 0
