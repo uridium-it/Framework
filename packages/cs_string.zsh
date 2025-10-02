@@ -4,5 +4,5 @@ package_build_install(){
 }
 
 package_update_source(){
-  gnu_sed -i 's/(MSVC)/(FALSE)/' ./CMakeLists.txt
+  gnu_sed -i 's#set(PKG_PREFIX "cmake/CsString")#set(PKG_PREFIX "${CMAKE_INSTALL_LIBDIR}/cmake/CsString")#' ./CMakeLists.txt
 }
