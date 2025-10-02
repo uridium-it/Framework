@@ -1,0 +1,8 @@
+{
+  "package": {
+    "name": "cs_string",
+    "version": "string-2.0.0",
+    "source_url": "https://github.com/copperspice/cs_string.git",
+    "build_type": "Release"
+  }
+}
